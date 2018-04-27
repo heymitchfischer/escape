@@ -56,12 +56,16 @@ class Chip
     return @body.p.x
   end
 
+  def y
+    return @body.p.y
+  end
+
   def check_footing(things)
     @off_ground = true
     things.each do |thing|
       @off_ground = false if touching?(thing)
     end
-    if @body.p.y > 765
+    if @body.p.y > 1565
       @off_ground = false
     end
   end
